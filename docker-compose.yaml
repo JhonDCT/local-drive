@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  localdrive:
+    container_name: local_drive
+    build: .
+    ports:
+      - 8080:8080
+    volumes:
+      - /upload-dir:/home/sanri/localdrive_backup
+
+volumes:
+  upload-dir:
+    external: true
